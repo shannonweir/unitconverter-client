@@ -4,9 +4,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 This is a simple Unit Converter interface that allows a user to convert metric measurements to imperial and vice versa.
 
 ## Prerequisites
-Node
-Angular - npm
-Docker
+1. Node
+2. Angular - npm
+3. Docker
 
 ## Development server 
 - Run in local
