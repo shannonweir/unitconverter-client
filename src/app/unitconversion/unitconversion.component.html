@@ -1,0 +1,63 @@
+<div class="container" style="display: flex; justify-content:center; align-items:center;">
+  <form [formGroup]="formGroup" class=roundCorners>
+    <div class="form-group">
+      Unit Conversion
+      <table>
+        <tr>
+          <td>
+            <mat-form-field appearance="standard">
+              <mat-label>Metric Type</mat-label>
+              <mat-select [(ngModel)]="selectedMetric" (valueChange)="selectMetricType($event)"
+                          [ngModelOptions]="{standalone: true}">
+                <mat-option *ngFor="let metricType of metricTypes" [value]="metricType">
+                  {{metricType.name}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <mat-form-field appearance="standard">
+              <mat-label>From Unit</mat-label>
+              <mat-select [(ngModel)]="selectedFromUnit" (valueChange)="compute($event, 'fromUnit')"
+                          [ngModelOptions]="{standalone: true}">
+                <mat-option *ngFor="let unit of units" [value]="unit">
+                  {{unit.name}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </td>
+          <td>
+            <mat-form-field appearance="standard">
+              <mat-label>To Unit</mat-label>
+              <mat-select [(ngModel)]="selectedToUnit" (valueChange)="compute($event, 'toUnit')"
+                          [ngModelOptions]="{standalone: true}">
+                <mat-option *ngFor="let unit of units" [value]="unit">
+                  {{unit.name}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <mat-form-field  appearance="outline">
+              <mat-label>Measurement</mat-label>
+              <input matInput type="text" formControlName="measurementInput" [(ngModel)]="measurement"
+                     (ngModelChange)="compute($event, 'input')">
+            </mat-form-field>
+          </td>
+          <td>
+            <mat-form-field  appearance="outline">
+              <mat-label>Result</mat-label>
+              <input matInput type="text" formControlName="resultInput" class="form-control" [(ngModel)]="result">
+            </mat-form-field>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </form>
+</div>
+
+

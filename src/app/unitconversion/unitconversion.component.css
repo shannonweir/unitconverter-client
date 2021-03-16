@@ -1,0 +1,9 @@
+.roundCorners {
+  border-radius: 15px;
+  /*background: -m;*/
+  outline-style: outset;
+  outline-color: #1976d2;
+  padding: 20px;
+  width: 400px;
+  height: 300px;
+}
