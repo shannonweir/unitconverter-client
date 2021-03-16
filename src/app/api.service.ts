@@ -24,6 +24,6 @@ export class ApiService {
       .set('measurement', measurement)
       .set('metricType', metricType)
       .set('unitConversion', unitConversion);
-    return this.httpClient.post('http://localhost:8080/ayo/api/convert', null,{params: params});
+    return this.httpClient.post('http://localhost:8080/ayo/api/convert', null, {params: params});
   }
 }

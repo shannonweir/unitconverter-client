@@ -1,6 +1,32 @@
-# UnitconverterClient
+# Unit Converter Client
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.4.
+This is a simple Unit Converter interface that allows a user to convert metric measurements to imperial and vice versa.
+
+## Prerequisites
+Node
+Angular - npm
+Docker
+
+## Development server 
+- Run in local
+  1. Pull the project
+  2. Open cmd   
+  3. Navigate to the project's root directory
+  4. Run 'npm install' 
+  5. Run 'ng build'
+  6. Run 'ng serve --open' to deploy the application
+
+- Run in docker
+  1. Pull the project
+  2. Open cmd
+  3. Navigate to the project's root directory
+  4. Run 'npm install'
+  5. Run 'ng build'
+  6. Run 'docker build --rm -t unitconverter-client:latest .'
+  7. Run 'docker run --rm -d -p 4200:80/tcp unitconverter-client:latest
+  
+The app should automatically open in your default browser but if it doesnt you can navigate to 'http://localhost:4200/
 
 ## Development server
 
