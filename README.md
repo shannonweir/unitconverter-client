@@ -8,7 +8,7 @@ This is a simple Unit Converter interface that allows a user to convert metric m
 2. Angular - npm
 3. Docker
 
-## Development server 
+## Steps to run unit converter client
 - Run in local
   1. Pull the project
   2. Open cmd   
